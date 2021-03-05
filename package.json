@@ -14,12 +14,23 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "gatsby": "^2.26.1",
+    "dotenv": "^8.2.0",
+    "framer-motion": "^3.10.0",
+    "gatsby": "^3.0.2",
+    "gatsby-plugin-image": "^1.0.0",
+    "gatsby-plugin-sass": "^3.2.0",
+    "gatsby-plugin-sharp": "^3.0.0",
+    "gatsby-source-sanity": "^6.0.5",
+    "gatsby-transformer-sharp": "^3.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "autoprefixer": "^10.2.4",
+    "gatsby-plugin-postcss": "^3.7.0",
+    "postcss": "^8.2.6",
+    "prettier": "2.2.1",
+    "tailwindcss": "^2.0.3"
   },
   "repository": {
     "type": "git",
