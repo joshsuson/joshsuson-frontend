@@ -4,6 +4,11 @@
 
 * {
   box-sizing: border-box;
+  font-family: "sora";
+}
+
+p {
+  font-family: "montserrat";
 }
 
 body {
@@ -49,7 +54,76 @@ h4 {
   transform: skew(15deg) rotate(-0.5deg);
 }
 
-.gradient-button-text:hover {
-  background-clip: text;
-  color: transparent;
+.custom-underline {
+  background-image: linear-gradient(
+    90deg,
+    #f43938,
+    #f64d3f,
+    #f86046,
+    #fa734d,
+    #fb8454,
+    #fd955c,
+    #fea663,
+    #ffb56b
+  );
+  background-size: 100% 0.2em;
+  background-repeat: no-repeat;
+  background-position: 0 105%;
+}
+
+.underline-hover {
+  background: transparent;
+  background-size: 100% 0.2em;
+  background-repeat: no-repeat;
+  background-position: 0 105%;
+}
+
+.underline-hover:hover {
+  background-image: linear-gradient(
+    90deg,
+    #f43938,
+    #f64d3f,
+    #f86046,
+    #fa734d,
+    #fb8454,
+    #fd955c,
+    #fea663,
+    #ffb56b
+  );
+}
+
+.hover-scale:hover {
+  transform: scale(1.009);
+}
+
+.main-glass {
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.card-glass-link {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.input-glass {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.submit-button {
+  border: 3px solid rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.circle {
+  border-radius: 100%;
 }
