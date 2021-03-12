@@ -7,7 +7,8 @@
   font-family: "sora";
 }
 
-p {
+p,
+h6 {
   font-family: "montserrat";
 }
 
@@ -126,4 +127,8 @@ h4 {
 
 .circle {
   border-radius: 100%;
+}
+
+.text-shadow {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }

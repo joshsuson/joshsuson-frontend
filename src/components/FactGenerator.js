@@ -28,9 +28,11 @@ export default function FactGenerator() {
   }
   return (
     <>
-      <h2>Random Facts</h2>
-      <div>
-        <h4>{fact}</h4>
+      <h2 className="text-center uppercase text-2xl mb-4">Random Facts</h2>
+      <div className="card-glass h-60 grid place-content-center shadow-xl rounded-md text-center p-6">
+        <h6 className="leading-loose text-xl bg-gradient-to-r from-customRed to-orange bg-clip-text text-transparent text-shadow">
+          {fact}
+        </h6>
       </div>
       <button onClick={handleClick}>Generate Fact</button>
     </>
