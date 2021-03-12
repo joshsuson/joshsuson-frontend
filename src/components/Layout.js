@@ -6,8 +6,8 @@ export default function Layout({ children }) {
   return (
     <div>
       <Header />
-      <main className="mx-auto rounded-xl relative z-10 main-glass">
-        <div className="max-w-5xl mx-auto">{children}</div>
+      <main className="max-w-6xl mx-auto rounded-xl relative z-10 main-glass">
+        <div>{children}</div>
       </main>
       <Footer />
     </div>

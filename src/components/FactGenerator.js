@@ -34,7 +34,12 @@ export default function FactGenerator() {
           {fact}
         </h6>
       </div>
-      <button onClick={handleClick}>Generate Fact</button>
+      <button
+        onClick={handleClick}
+        className="bg-gradient-to-r from-customRed from to-orange py-3 px-5 tracking-wide rounded-md block my-6 w-6/12 mx-auto text-white uppercase"
+      >
+        Generate Fact
+      </button>
     </>
   )
 }
