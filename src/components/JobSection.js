@@ -34,8 +34,8 @@ export default function JobSection() {
 
   return (
     <div className="pt-14">
-      <Heading text="My Latest Work" />
-      <div className="px-12 pt-16 grid grid-cols-3 gap-10 justify-around">
+      <Heading text="My Latest Work" align="text-center" />
+      <div className="px-12 pt-16 grid grid-cols-3 gap-10 justify-around mb-16">
         {data.allSanityJob.edges.map(({ node }) => {
           return (
             <JobCard

@@ -4,7 +4,7 @@ import Heading from "./Heading"
 export default function AboutBlurb() {
   return (
     <div>
-      <Heading text="Development With Purpose" />
+      <Heading text="Development With Purpose" align="text-center" />
       <p className="leading-relaxed p-8 text-center">
         My name is Josh Suson. I'm a frontend web developer from Concord, North
         Carolina. I believe that the internet and digital products are some of

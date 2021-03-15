@@ -6,7 +6,7 @@ import FactGenerator from "./FactGenerator"
 export default function FactsSection() {
   return (
     <div>
-      <Heading text="Even More About Me" />
+      <Heading text="Even More About Me" align="text-center" />
       <div className="grid grid-cols-2 mt-10 px-8">
         <div>
           <QuickFacts />
