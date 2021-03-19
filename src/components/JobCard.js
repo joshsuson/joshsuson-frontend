@@ -28,7 +28,7 @@ export default function JobCard({ name, image, tech, slug, desc }) {
       <div className="mb-6 mt-auto   p-0.5 mx-auto transition-all">
         <Link
           className="bg-gradient-to-r from-customRed to-orange block text-center bg-clip-text text-transparent uppercase text-base font-semibold tracking-wide p-1"
-          to={`/${slug}`}
+          to={`job/${slug}`}
         >
           <span className="underline-hover">Read the case study</span>
         </Link>
