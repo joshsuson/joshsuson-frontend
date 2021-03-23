@@ -5,7 +5,7 @@ import PortableText from "react-portable-text"
 import Img from "gatsby-image"
 import Heading from "../components/Heading"
 
-export default function JobTemplate({ data: { job } }) {
+export default function JobTemplate({ data: { project } }) {
   const serializers = {
     li: ({ children }) => (
       <li className="list-disc ml-6 leading-relaxed mt-2">{children}</li>
@@ -19,9 +19,12 @@ export default function JobTemplate({ data: { job } }) {
   return (
     <Layout>
       <div className="mb-12">
-        <Img className="rounded-t-lg" fluid={job.featuredImage.asset.fluid} />
+        <Img
+          className="rounded-t-lg"
+          fluid={project.featuredImage.asset.fluid}
+        />
       </div>
-      <Heading text={job.name} align="text-center" />
+      <Heading text={project.name} align="text-center" />
       <div className="mt-12 w-11/12 mx-auto grid grid-cols-2 grid-rows-2 grid-flow-col gap-12 mb-12">
         <div>
           <h5 className="mb-4">
@@ -30,7 +33,7 @@ export default function JobTemplate({ data: { job } }) {
             </span>
           </h5>
           <PortableText
-            content={job._rawProjectTask}
+            content={project._rawProjectTask}
             serializers={serializers}
           />
         </div>
@@ -41,7 +44,7 @@ export default function JobTemplate({ data: { job } }) {
             </span>
           </h5>
           <PortableText
-            content={job._rawProjectSolution}
+            content={project._rawProjectSolution}
             serializers={serializers}
           />
         </div>
@@ -52,30 +55,16 @@ export default function JobTemplate({ data: { job } }) {
             </span>
           </h5>
           <div className="flex flex-row flex-wrap justify-between">
-            {job.technologiesUsed.map(tech => (
+            {project.technologiesUsed.map(tech => (
               <Img className="w-36" fluid={tech.logo.asset.fluid} />
             ))}
           </div>
         </div>
-        {job.skillsUsed && (
-          <div>
-            <h5 className="mb-4">
-              <span className="text-xl text-bold custom-underline">
-                Skills Used For Project
-              </span>
-            </h5>
-            <ul className="list-inside">
-              {job.skillsUsed.map(skill => (
-                <li className="list-disc mt-4 ml-4">{skill}</li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
       <div className="mb-12">
         <a
           className="bg-gradient-to-r from-customRed to-orange p-4 w-4/12 block mx-auto text-center uppercase text-white rounded-lg hover:shadow-2xl shadow-xl tracking-wide"
-          href={job.liveUrl}
+          href={project.liveUrl}
           target="_blank"
           rel="noreferrer"
         >
@@ -88,9 +77,8 @@ export default function JobTemplate({ data: { job } }) {
 
 export const query = graphql`
   query($slug: String!) {
-    job: sanityJob(slug: { current: { eq: $slug } }) {
+    project: sanityProject(slug: { current: { eq: $slug } }) {
       name
-      skillsUsed
       description
       _rawProjectTask
       _rawProjectSolution

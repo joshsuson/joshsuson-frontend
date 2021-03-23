@@ -5,8 +5,8 @@ import { StaticImage } from "gatsby-plugin-image"
 
 export default function AboutSection() {
   return (
-    <div className="flex gap-10 pt-16 px-10 mb-12">
-      <div className="w-6/12">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 pt-20 p-4 lg:px-14 mb-12">
+      <div>
         <div className="bg-gradient-to-r from-customRed to-orange ">
           <StaticImage
             className="relative transform -translate-x-3 -translate-y-2"
@@ -15,8 +15,11 @@ export default function AboutSection() {
           />
         </div>
       </div>
-      <div className="w-6/12">
-        <Heading text="Hi. I'm Glad You're Here" align="text-left" />
+      <div>
+        <Heading
+          text="Hi. I'm Glad You're Here"
+          align="text-center lg:text-left"
+        />
         <p className=" leading-7 my-10">
           My name is Josh Suson (in case you missed the title). I'm a Front End
           Web Developer that's learning to develop applications as well. I spend

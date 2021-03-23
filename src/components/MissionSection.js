@@ -22,21 +22,23 @@ export default function MissionSection() {
     }
   `)
   return (
-    <div className="px-8 py-8">
+    <div className="px-4 lg:px-14 py-8">
       <div className="mb-8">
-        <h2 className="text-center uppercase pb-3 text-3xl font-semibold">
+        <h2 className="text-center uppercase pb-6 text-3xl font-semibold">
           My Mission
         </h2>
-        <p>{data.allSanityProfile.edges[0].node.mission}</p>
+        <p className="text-center lg:text-left">
+          {data.allSanityProfile.edges[0].node.mission}
+        </p>
       </div>
       <div className="pt-8">
-        <h2 className="text-center uppercase pb-3 text-3xl font-semibold">
+        <h2 className="text-center uppercase pb-6 text-3xl font-semibold">
           My Values
         </h2>
         <ul>
           {data.allSanityValues.edges.map(({ node }) => (
-            <li className="mb-4 leading-relaxed" key={node.name}>
-              <span className="text-lg font-semibold mr-2 mb-2 custom-underline">
+            <li className="mb-8 leading-relaxed" key={node.name}>
+              <span className="text-lg font-semibold mr-2 custom-underline">
                 {node.name}:{" "}
               </span>
               <p className="inline">{node.description}</p>

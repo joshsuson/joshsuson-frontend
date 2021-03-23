@@ -14,7 +14,7 @@ export default function Footer() {
       style={{ scaleY: scale, opacity }}
       className="max-w-5xl mt-14 mx-auto text-center sticky bottom-0"
     >
-      <footer>
+      <footer className="overflow-scroll lg:overflow-auto h-screen lg:h-auto">
         <FooterForm />
         <FooterNav />
         <div className="flex justify-center mt-8 text-white gap-6">
@@ -44,7 +44,33 @@ export default function Footer() {
           </a>
         </div>
         <div className="text-white text-sm font-thin tracking-wide mt-6 mb-4 opacity-75">
-          © 2021 joshsuson.com | All Rights Reserved
+          Built with{" "}
+          <span className="bg-white text-center hover:bg-transparent">
+            <a
+              className="font-semibold bg-gradient-to-r from-customRed to-orange bg-clip-text text-transparent p-1 text-center hover:text-white tracking-wider"
+              href="https://www.gatsbyjs.com/"
+            >
+              Gatsby.
+            </a>
+          </span>{" "}
+          Content managed with{" "}
+          <span className="bg-white text-center hover:bg-transparent">
+            <a
+              className="font-semibold bg-gradient-to-r from-customRed to-orange bg-clip-text text-transparent p-1 text-center hover:text-white tracking-wider"
+              href="https://www.sanity.io/"
+            >
+              Sanity.io.
+            </a>
+          </span>{" "}
+          Hosted on{" "}
+          <span className="bg-white text-center hover:bg-transparent">
+            <a
+              className="font-semibold bg-gradient-to-r from-customRed to-orange bg-clip-text text-transparent p-1 text-center hover:text-white tracking-wider"
+              href="https://www.gatsbyjs.com/cloud/"
+            >
+              Gatsby Cloud.
+            </a>
+          </span>{" "}
         </div>
       </footer>
     </motion.div>

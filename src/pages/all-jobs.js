@@ -6,14 +6,14 @@ import { graphql } from "gatsby"
 export default function AllJobsPage({ data }) {
   return (
     <Layout>
-      <AllJobs data={data.allSanityJob.nodes} heading="All Jobs" />
+      <AllJobs data={data.allSanityJob.nodes} heading="All Jobs" type="job" />
     </Layout>
   )
 }
 
 export const query = graphql`
   {
-    allSanityJob {
+    allSanityJob(sort: { fields: _createdAt, order: DESC }) {
       nodes {
         featuredImage {
           asset {

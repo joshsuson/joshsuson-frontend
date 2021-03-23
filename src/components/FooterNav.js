@@ -23,12 +23,6 @@ export default function FooterNav() {
         >
           Projects
         </Link>
-        <Link
-          to="/my-site"
-          className="text-white uppercase px-3 py-1 border border-transparent hover:border-gray-300 transition"
-        >
-          How'd You Build This Site?
-        </Link>
       </nav>
     </div>
   )

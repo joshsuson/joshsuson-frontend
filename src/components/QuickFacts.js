@@ -14,7 +14,9 @@ export default function QuickFacts() {
   }, [year])
   return (
     <>
-      <h2 className="text-center uppercase text-2xl mb-4">Quick Facts</h2>
+      <h2 className="text-center uppercase text-xl lg:text-2xl mb-8">
+        Quick Facts
+      </h2>
       <QuickFact fact="I live in Concord, NC">
         <FactIcon>
           <MdLocationOn style={{ fill: "url(#main-gradient)" }} />

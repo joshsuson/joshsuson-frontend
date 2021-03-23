@@ -27,6 +27,33 @@ async function turnJobsIntoPages({ graphql, actions }) {
   })
 }
 
+async function turnProjectsIntoPages({ graphql, actions }) {
+  const projectTemplate = path.resolve("./src/templates/projectTemplate.js")
+
+  const { data } = await graphql(`
+    {
+      projects: allSanityProject {
+        nodes {
+          name
+          slug {
+            current
+          }
+        }
+      }
+    }
+  `)
+
+  data.projects.nodes.forEach(project => {
+    actions.createPage({
+      path: `project/${project.slug.current}`,
+      component: projectTemplate,
+      context: {
+        slug: project.slug.current,
+      },
+    })
+  })
+}
+
 exports.createPages = async params => {
-  await Promise.all([turnJobsIntoPages(params)])
+  await Promise.all([turnJobsIntoPages(params), turnProjectsIntoPages(params)])
 }

@@ -22,7 +22,7 @@ export default function ProfilePicture() {
     }
   `)
   return (
-    <div className="my-6">
+    <div className="my-14">
       <div className="mx-auto bg-gradient-to-r from-customRed to-orange h-64 w-64 circle grid place-content-center ">
         <Img
           className="h-60 w-60 circle"

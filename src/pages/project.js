@@ -12,6 +12,7 @@ export default function ProjectPage({ data }) {
         page="/all-jobs"
         buttonText="See All of my Work"
         subtitle="The most recent jobs I've completed"
+        type="job"
       />
       <JobSection
         data={data.allSanityProject.edges}
@@ -19,6 +20,7 @@ export default function ProjectPage({ data }) {
         subtitle="Projects, for fun, to help me learn"
         page="/all-projects"
         buttonText="See all my Projects"
+        type="project"
       />
     </Layout>
   )

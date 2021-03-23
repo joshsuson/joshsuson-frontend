@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 
-export default function JobCard({ name, image, tech, slug, desc }) {
+export default function JobCard({ name, image, tech, slug, desc, type }) {
   return (
     <div className="shadow-2xl rounded-lg flex flex-col card-glass">
       <Img className="rounded-t-lg h-48" fluid={image} />
@@ -28,7 +28,7 @@ export default function JobCard({ name, image, tech, slug, desc }) {
       <div className="mb-6 mt-auto   p-0.5 mx-auto transition-all">
         <Link
           className="bg-gradient-to-r from-customRed to-orange block text-center bg-clip-text text-transparent uppercase text-base font-semibold tracking-wide p-1"
-          to={`job/${slug}`}
+          to={`/${type}/${slug}`}
         >
           <span className="underline-hover">Read the case study</span>
         </Link>
