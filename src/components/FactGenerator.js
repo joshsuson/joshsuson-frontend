@@ -31,7 +31,7 @@ export default function FactGenerator() {
       <h2 className="text-center uppercase text-xl lg:text-2xl mb-8 mt-8 lg:mt-0">
         Random Facts
       </h2>
-      <div className="card-glass h-48 lg:h-60  grid place-content-center shadow-xl rounded-md text-center p-6">
+      <div className="card-glass h-48 lg:h-60 grid place-content-center shadow-xl rounded-md text-center p-6">
         <h6 className="leading-loose text-lg lg:text-xl bg-gradient-to-r from-customRed to-orange bg-clip-text text-transparent text-shadow">
           {fact}
         </h6>

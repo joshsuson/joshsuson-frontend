@@ -18,58 +18,63 @@ export default function JobTemplate({ data: { project } }) {
 
   return (
     <Layout>
-      <div className="mb-12">
-        <Img
-          className="rounded-t-lg"
-          fluid={project.featuredImage.asset.fluid}
-        />
-      </div>
-      <Heading text={project.name} align="text-center" />
-      <div className="mt-12 w-11/12 mx-auto grid grid-cols-2 grid-rows-2 grid-flow-col gap-12 mb-12">
+      <div className="mb-20">
         <div>
-          <h5 className="mb-4">
-            <span className="text-xl text-bold custom-underline">
-              Project Task
-            </span>
-          </h5>
-          <PortableText
-            content={project._rawProjectTask}
-            serializers={serializers}
+          <Img
+            className="rounded-t-lg"
+            fluid={project.featuredImage.asset.fluid}
           />
         </div>
-        <div>
-          <h5 className="mb-4">
-            <span className="text-xl text-bold custom-underline">
-              Project Solution
-            </span>
-          </h5>
-          <PortableText
-            content={project._rawProjectSolution}
-            serializers={serializers}
-          />
-        </div>
-        <div>
-          <h5 className="mb-4">
-            <span className="text-xl text-bold custom-underline">
-              Tech Used For Project
-            </span>
-          </h5>
-          <div className="flex flex-row flex-wrap justify-between">
-            {project.technologiesUsed.map(tech => (
-              <Img className="w-36" fluid={tech.logo.asset.fluid} />
-            ))}
+        <Heading text={project.name} align="text-center my-16" />
+        <div className="mt-12 px-4 lg:px-14 grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 lg:grid-flow-col gap-12 mb-12">
+          <div>
+            <h5 className="mb-4">
+              <span className="text-xl text-bold custom-underline">
+                Project Task
+              </span>
+            </h5>
+            <PortableText
+              content={project._rawProjectTask}
+              serializers={serializers}
+            />
+          </div>
+          <div>
+            <h5 className="mb-4">
+              <span className="text-xl text-bold custom-underline">
+                Project Solution
+              </span>
+            </h5>
+            <PortableText
+              content={project._rawProjectSolution}
+              serializers={serializers}
+            />
+          </div>
+          <div>
+            <h5 className="mb-4">
+              <span className="text-xl text-bold custom-underline">
+                Tech Used For Project
+              </span>
+            </h5>
+            <div className="flex flex-row flex-wrap justify-between">
+              {project.technologiesUsed.map(tech => (
+                <Img
+                  className="w-4/12 md:w-3/12 lg:w-36"
+                  fluid={tech.logo.asset.fluid}
+                />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-      <div className="mb-12">
-        <a
-          className="bg-gradient-to-r from-customRed to-orange p-4 w-4/12 block mx-auto text-center uppercase text-white rounded-lg hover:shadow-2xl shadow-xl tracking-wide"
-          href={project.liveUrl}
-          target="_blank"
-          rel="noreferrer"
-        >
-          View Live Site
-        </a>
+        <div className="mb-12">
+          <a
+            className="bg-gradient-to-r from-customRed to-orange p-4 w-11/12 md:w-4/12 block mx-auto text-center uppercase text-white rounded-lg hover:shadow-2xl shadow-xl tracking-wide"
+            href={project.liveUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Live Site
+          </a>
+        </div>
       </div>
     </Layout>
   )

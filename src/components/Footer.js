@@ -1,7 +1,7 @@
 import React from "react"
 import FooterNav from "./FooterNav"
 import FooterForm from "./FooterForm"
-import { FaTwitter, FaGithub, FaLinkedinIn } from "react-icons/fa"
+import { FaTwitter, FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa"
 import { motion, useViewportScroll, useTransform } from "framer-motion"
 
 export default function Footer() {
@@ -12,12 +12,14 @@ export default function Footer() {
   return (
     <motion.div
       style={{ scaleY: scale, opacity }}
-      className="max-w-5xl mt-14 mx-auto text-center sticky bottom-0"
+      className="max-w-5xl mt-10 mx-auto text-center sticky bottom-0"
     >
-      <footer className="overflow-scroll lg:overflow-auto h-screen lg:h-auto">
-        <FooterForm />
-        <FooterNav />
-        <div className="flex justify-center mt-8 text-white gap-6">
+      <footer>
+        <h2 className="text-white text-2xl md:text-3xl">Connect with me</h2>
+        <h4 className="text-gray-700 italic mt-2 text-lg md:text-xl">
+          I'd love to hear from you
+        </h4>
+        <div className="flex justify-center mt-4 mb-8 text-white gap-6">
           <a
             className="border border-transparent hover:border-gray-300 p-1"
             href="https://twitter.com/joshsuson"
@@ -42,8 +44,17 @@ export default function Footer() {
           >
             <FaLinkedinIn size="2em" />
           </a>
+          <a
+            className="border border-transparent hover:border-gray-300 p-1"
+            href="mailto:josh.suson@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaEnvelope size="2em" />
+          </a>
         </div>
-        <div className="text-white text-sm font-thin tracking-wide mt-6 mb-4 opacity-75">
+        <FooterNav />
+        <div className="text-white text-sm md:text-lg font-thin tracking-wide mt-6 mb-4 opacity-75">
           Built with{" "}
           <span className="bg-white text-center hover:bg-transparent">
             <a
@@ -70,7 +81,7 @@ export default function Footer() {
             >
               Gatsby Cloud.
             </a>
-          </span>{" "}
+          </span>
         </div>
       </footer>
     </motion.div>

@@ -6,22 +6,24 @@ import JobSection from "../components/JobSection"
 export default function ProjectPage({ data }) {
   return (
     <Layout>
-      <JobSection
-        data={data.allSanityJob.edges}
-        heading="My Recent Work"
-        page="/all-jobs"
-        buttonText="See All of my Work"
-        subtitle="The most recent jobs I've completed"
-        type="job"
-      />
-      <JobSection
-        data={data.allSanityProject.edges}
-        heading="Practice Projects"
-        subtitle="Projects, for fun, to help me learn"
-        page="/all-projects"
-        buttonText="See all my Projects"
-        type="project"
-      />
+      <div className="mb-20">
+        <JobSection
+          data={data.allSanityJob.edges}
+          heading="My Recent Work"
+          page="/all-jobs"
+          buttonText="See All of my Work"
+          subtitle="The most recent jobs I've completed"
+          type="job"
+        />
+        <JobSection
+          data={data.allSanityProject.edges}
+          heading="Practice Projects"
+          subtitle="Projects, for fun, to help me learn"
+          page="/all-projects"
+          buttonText="See all my Projects"
+          type="project"
+        />
+      </div>
     </Layout>
   )
 }
