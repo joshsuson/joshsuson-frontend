@@ -15,7 +15,7 @@ export default function AboutBlurb() {
         things are being used for the wrong reasons in a lot of people's lives.
         I want to change that. When I decided to become a developer, it wasn't
         just so I could make cool things. It was so I could make cool things
-        with a purpose. So I decided to develop on a mission. I want create
+        with a purpose. So I decided to develop on a mission. I want to create
         beautiful, simple products that create a positive impact on people's
         lives. If you'd like to know more how I do that or find out some fun
         things about me, please keep reading.
