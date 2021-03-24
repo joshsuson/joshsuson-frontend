@@ -1,6 +1,5 @@
 import React from "react"
 import FooterNav from "./FooterNav"
-import FooterForm from "./FooterForm"
 import { FaTwitter, FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa"
 import { motion, useViewportScroll, useTransform } from "framer-motion"
 

@@ -5,7 +5,11 @@ import Img from "gatsby-image"
 export default function JobCard({ name, image, tech, slug, desc, type }) {
   return (
     <div className="shadow-2xl rounded-lg flex flex-col card-glass">
-      <Img className="rounded-t-lg h-48" fluid={image} />
+      <Img
+        className="rounded-t-lg h-48"
+        fluid={image}
+        alt={`${name} screenshot`}
+      />
       <div className="grid grid-rows-2 px-4 gap-2">
         <div className="mt-4">
           <h2 className="text-center text-sm font-bold tracking-wide mb-2">

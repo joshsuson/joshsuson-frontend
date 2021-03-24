@@ -17,6 +17,7 @@ export default function LogoSection() {
               }
             }
             _id
+            name
           }
         }
       }
@@ -27,7 +28,11 @@ export default function LogoSection() {
       <Heading text="Tech I Use" align="text-center" />
       <div className="flex flex-row flex-wrap justify-around px-12 gap-2 pt-14">
         {data.allSanityTechnology.edges.map(({ node }) => (
-          <TechLogo key={node._id} image={node.logo.asset.fluid} />
+          <TechLogo
+            key={node._id}
+            image={node.logo.asset.fluid}
+            name={node.name}
+          />
         ))}
       </div>
     </div>

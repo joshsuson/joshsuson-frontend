@@ -4,10 +4,12 @@ import AboutSection from "../components/AboutSection"
 import JobSection from "../components/JobSection"
 import LogoSection from "../components/LogoSection"
 import { graphql } from "gatsby"
+import SEO from "../components/SEO"
 
 export default function Home({ data }) {
   return (
     <Layout>
+      <SEO title="Home" />
       <AboutSection />
       <JobSection
         data={data.allSanityJob.edges}

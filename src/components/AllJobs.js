@@ -9,12 +9,16 @@ export default function AllJobs({ data, heading, type }) {
       <Heading text={heading} align="text-center mb-20" />
       <div>
         {data.map(job => (
-          <div className="grid gap-6 lg:gap-14 xl:gap-20 mb-16 lg:mb-20 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+          <div
+            key={job.name}
+            className="grid gap-6 lg:gap-14 xl:gap-20 mb-16 lg:mb-20 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
+          >
             <div>
               <div className="xl:w-80 lg:h-60 bg-gradient-to-r from-customRed to-orange">
                 <Img
                   className="h-full transform translate-x-2 translate-y-2"
                   fluid={job.featuredImage.asset.fluid}
+                  alt={`${job.name} screenshot`}
                 />
               </div>
             </div>
@@ -24,6 +28,7 @@ export default function AllJobs({ data, heading, type }) {
               <div className="grid lg:grid-rows-4 grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 lg:grid-flow-col gap-2 mb-4">
                 {job.technologiesUsed.map(tech => (
                   <p
+                    key={tech.name}
                     className="rounded-sm text-center py-1 text-sm"
                     style={{ backgroundColor: `${tech.color}` }}
                   >
