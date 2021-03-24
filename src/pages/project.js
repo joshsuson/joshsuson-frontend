@@ -2,10 +2,12 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import JobSection from "../components/JobSection"
+import SEO from "../components/SEO"
 
 export default function ProjectPage({ data }) {
   return (
     <Layout>
+      <SEO title="Projects" />
       <div className="mb-20">
         <JobSection
           data={data.allSanityJob.edges}

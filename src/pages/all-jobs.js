@@ -2,10 +2,12 @@ import React from "react"
 import Layout from "../components/Layout"
 import AllJobs from "../components/AllJobs"
 import { graphql } from "gatsby"
+import SEO from "../components/SEO"
 
 export default function AllJobsPage({ data }) {
   return (
     <Layout>
+      <SEO title="All Jobs" />
       <AllJobs data={data.allSanityJob.nodes} heading="All Jobs" type="job" />
     </Layout>
   )

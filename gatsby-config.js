@@ -8,12 +8,19 @@ dotenv.config({ path: ".env" })
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `Josh Suson`,
+    siteUrl: "https://joshsuson.com",
+    description: "Development with a purpose",
+    twitter: "@joshsuson",
+  },
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

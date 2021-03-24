@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import PortableText from "react-portable-text"
 import Img from "gatsby-image"
 import Heading from "../components/Heading"
+import SEO from "../components/SEO"
 
 export default function JobTemplate({ data: { project } }) {
   const serializers = {
@@ -18,6 +19,7 @@ export default function JobTemplate({ data: { project } }) {
 
   return (
     <Layout>
+      <SEO title={`${project.name}`} />
       <div className="mb-20">
         <div>
           <Img
