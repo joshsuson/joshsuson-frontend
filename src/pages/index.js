@@ -16,6 +16,7 @@ export default function Home({ data }) {
         heading="My Latest Work"
         page="/project"
         buttonText="See More of my Work"
+        type="job"
       />
       <LogoSection />
     </Layout>
